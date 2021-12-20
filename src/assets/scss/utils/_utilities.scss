@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "variables" as *;
+
+$utilities: (
+  "font-weight": (
+    "prefix": "fw",
+    "values": (
+      "300": $font-weight-300,
+      "400": $font-weight-400,
+      "500": $font-weight-500,
+      "600": $font-weight-600,
+      "700": $font-weight-700,
+    ),
+  ),
+);
+
+// generate utility classes
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}

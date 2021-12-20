@@ -1,0 +1,61 @@
+@use "functions" as *;
+
+// Colors
+// Primary
+
+$light-red: #FF525D;
+$very-light-red: #FF7A85;
+$orange:  #FF856E;
+$very-dark-blue: #1F3F5B;
+
+// Neutral
+$white: #ffffff;
+$grayish-blue: #C8C8CB;
+$very-dark-grayish-blue: #4B5862;
+$very-dark-black-blue: #25252D;
+$very-dark-desaturated-blue: #3F4164;
+
+
+// Gradient
+$linear-gradient-vertical-red: linear-gradient(180deg, $orange 0%, $light-red 100%);
+$linear-gradient-horizontal-red: linear-gradient(90deg, $very-light-red 0%, $light-red 100%);
+
+$linear-gradient-horizontal-dark-blue: linear-gradient(90deg, #2F3044 0%, #3D4061 100%);
+$linear-gradient-vertical-dark-blue: linear-gradient(180deg, #2F3044 0%, #3D4061 100%);
+
+
+// Colors Pallete
+$colors: (
+  "light-red": $light-red,
+  "orange": $orange,
+  "very-light-red": $very-light-red,
+  "white": $white,
+  "grayish-blue": $grayish-blue,
+  "very-dark-blue": $very-dark-blue,
+  "very-dark-grayish-blue": $very-dark-grayish-blue,
+  "very-dark-black-blue": $very-dark-black-blue,
+  "very-dark-desaturated-blue": $very-dark-desaturated-blue,
+);
+
+// Font size
+$base-font-size: rem(16) !default;
+
+// Font Weight
+$font-weight-300: 300 !default;
+$font-weight-400: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-600: 600 !default;
+$font-weight-700: 700 !default;
+
+// Border Radius
+$border-radius-100: rem(100);
+$border-radius-4: rem(4);
+
+$border-radius-hero: 0 0 0 rem(100);
+$border-radius-state: 0 rem(100);
+$border-radius-footer: 0 rem(100) 0 0;
+$base-border-radius: rem(8) !default;
+
+// Box-Shadow
+// $base-box-shadow: 0px 10px 25px rgba($red, 0.1), 0px 10px 25px rgba($red, 0.1);
+$box-shadow-dropdown:  0px 14px 24px rgba(0, 0, 0, 0.25), 0px 1.75302px 3.00517px rgba(0, 0, 0, 0.125);
