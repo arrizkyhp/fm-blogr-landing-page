@@ -1,5 +1,33 @@
 @use "../utils" as *;
 
 .hero {
-  color: aqua;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    font-family: $font-overpass;
+    text-align: center;
+
+    h1 {
+    font-size: rem(68);
+    font-weight: $font-weight-500;
+    }
+
+    p {
+      font-size: rem(24);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+  }
+
 }

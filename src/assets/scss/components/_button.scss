@@ -1,0 +1,41 @@
+@use "../utils" as *;
+
+.btn {
+    border: none;
+    height: 45px;
+    width: rem(132);
+    border-radius: $border-radius-100;
+    font-family: $font-ubuntu;
+    font-weight: $font-weight-700;
+    font-size: rem(16);
+    cursor: pointer;
+
+    &-primary {
+        background: $linear-gradient-horizontal-red;
+        color: $white;
+
+    }
+
+    &-white {
+        background: $white;
+        color: $light-red;
+        transition: .3s;
+
+        &:hover {
+            background: $very-light-red;
+            color: $white;
+        }
+    }
+
+    &-border {
+        background: transparent;
+        color: $white;
+        border: rem(2) solid $white;
+        transition: .3s;
+
+        &:hover {
+            background: $white;
+            color: $light-red;
+        }
+    }
+}

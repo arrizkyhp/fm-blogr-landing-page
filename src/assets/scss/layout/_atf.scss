@@ -1,0 +1,11 @@
+@use "../utils" as *;
+
+.atf {
+      background: url(assets/images/bg-pattern-intro-desktop.svg), $linear-hero;
+  background-size: 2000px;
+  background-position: left center;
+  max-width: 100vw;
+  position: relative;
+   height: 85vh;
+   border-radius: $border-radius-hero;
+}
