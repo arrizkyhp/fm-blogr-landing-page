@@ -1,0 +1,55 @@
+@use "../utils" as *;
+
+.designed {
+    padding-top: rem(120);
+    width: 100%;
+    text-align: center;
+     max-width: rem(1300);
+    margin: auto;
+
+     @include breakpoint-max(xxl) {
+        max-width: rem(1200);
+    }
+
+    &__title {
+        font-size: rem(38);
+        font-weight: $font-weight-400;
+        font-family: $font-overpass;
+        margin-bottom: rem(100);
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr );
+        text-align: left;
+        position: relative;
+
+        &__text {
+            font-family: $font-overpass;
+            display: flex;
+            flex-direction: column;
+            gap: rem(70);
+
+            h2 {
+                font-weight: $font-weight-400;
+                font-size: rem(27);
+                margin-bottom: rem(20);
+            }
+
+            p {
+                line-height: rem(30);
+                max-width: rem(500);
+            }
+
+        }
+
+        &__image {
+            position: absolute;
+            right: -23.5vw;
+            top: rem(-240);
+            z-index: -1;
+        }
+    }
+
+
+}

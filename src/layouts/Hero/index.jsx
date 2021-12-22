@@ -1,9 +1,10 @@
 import Button from "components/Button/Button";
-import Navigation from "layouts/Navigation";
+import background from "assets/images/bg-pattern-intro-desktop.svg"
 
 export default function Hero() {
     return (
       <section class="hero">
+        <img className="hero__background" src={background} alt="" />
         <div className="hero__content text-white">
           <h1>A modern publishing platform</h1>
           <p>Grow your audience and build your online brand</p>

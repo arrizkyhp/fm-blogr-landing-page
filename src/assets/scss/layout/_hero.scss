@@ -1,16 +1,29 @@
 @use "../utils" as *;
 
 .hero {
-
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  &__background {
+    position: absolute;
+    bottom: -150vh;
+    left: -30vw;
+    z-index: 0;
+
+    // Laptop view
+    @include breakpoint-max(xxl) {
+      bottom: -190vh;
+      left: -35vw;
+    }
+  }
 
   &__content {
     font-family: $font-overpass;
     text-align: center;
+    z-index: 2;
 
     h1 {
     font-size: rem(68);

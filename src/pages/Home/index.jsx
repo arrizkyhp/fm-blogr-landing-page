@@ -1,3 +1,4 @@
+import Designed from "layouts/Designed";
 import Hero from "layouts/Hero";
 import Navigation from "layouts/Navigation";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Navigation />
         <Hero />
     </div>
+    <Designed />
     </>
   );
 }
