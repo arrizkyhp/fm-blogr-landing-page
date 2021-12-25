@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+footer {
+    background-color: $very-dark-black-blue;
+    border-radius: $border-radius-footer;
+    padding: rem(60) 0 rem(120) 0;
+
+
+    .footer-content {
+        width: 100%;
+        max-width: rem(1300);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        // Laptop Viewport
+        @include breakpoint-max(xxl) {
+            max-width: rem(1200);
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            font-family: $font-ubuntu;
+            gap: rem(50);
+
+            h1 {
+                font-weight: 700;
+                font-size: rem(16);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: rem(15);
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@
     text-align: center;
      max-width: rem(1300);
     margin: auto;
+    margin-bottom: rem(250);
 
      @include breakpoint-max(xxl) {
         max-width: rem(1200);

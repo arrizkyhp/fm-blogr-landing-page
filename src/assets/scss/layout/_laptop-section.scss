@@ -1,0 +1,61 @@
+@use '../utils' as *;
+
+.laptop-section {
+    display: flex;
+
+    &__content {
+     display: flex;
+     width: 100%;
+     max-width: rem(1400);
+     position: relative;
+     margin: auto;
+     margin-bottom: rem(295);
+
+     &__illustration {
+         position: absolute;
+         left: -26%;
+         top: -45%;
+
+         // Laptop/Ipad Pro Viewport
+         @include breakpoint-max(xxl) {
+             left: -21%;
+         }
+     }
+
+     &__text {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1.15fr 1fr;
+        justify-content: end;
+
+        .text-column {
+            order: 2;
+            width: 100%;
+            max-width: rem(490);
+            grid-column-start: 2;
+            grid-column-end: -1;
+            display: flex;
+            flex-direction: column;
+            gap: rem(70);
+
+            .text-group {
+                font-family: $font-overpass;
+                color: $very-dark-blue;
+                display: flex;
+                flex-direction: column;
+                gap: rem(20);
+
+                h1 {
+                    font-size: rem(27);
+                    font-weight: 400;
+                }
+
+                p {
+                    line-height: rem(30);
+                }
+
+            }
+        }
+     }
+    }
+}
