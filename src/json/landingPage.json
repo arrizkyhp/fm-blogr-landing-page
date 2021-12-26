@@ -11,7 +11,7 @@
           {
             "_id": "btnhero2",
             "title": "Learn More",
-            "type": "outline"
+            "type": "border"
           }
         ]
     },
@@ -36,18 +36,21 @@
     },
     "laptopSection": [
       {
+        "_id": "lptpsectiontxt1",
         "title": "Free, open, simple",
         "description": "Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn."
       },
       {
+        "_id": "lptpsectiontxt2",
         "title": "Powerful tooling",
         "description": "Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites."
       }
     ],
     "footerMenu": [
       {
+        "_id": "footermenu1",
         "title": "Product",
-        "menu": [
+        "lists": [
           {
             "name": "Overview",
             "url": "/"
@@ -71,8 +74,9 @@
         ]
       },
       {
+        "_id": "footermenu2",
         "title": "Company",
-        "menu": [
+        "lists": [
           {
             "name": "About",
             "url": "/"
@@ -92,8 +96,9 @@
         ]
       },
       {
+        "_id": "footermenu3",
         "title": "Connect",
-        "menu": [
+        "lists": [
           {
             "name": "Contact",
             "url": "/"

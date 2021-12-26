@@ -1,39 +1,22 @@
 import logo from "assets/images/logo.svg";
 
-const Footer = () => {
+const Footer = ({ data }) => {
+
   return <footer>
     <div className="footer-content">
       <img src={logo} alt="blogr logo" className="logo" />
-      <div className="footer-content__menu">
-        <h1>Product</h1>
-        <ul>
-          <li> <a href="/">Overview</a> </li>
-          <li> <a href="/">Pricing</a> </li>
-          <li> <a href="/">Marketplace</a> </li>
-          <li> <a href="/">Features</a> </li>
-          <li> <a href="/">Integrations</a> </li>
-        </ul>
-      </div>
-      <div className="footer-content__menu">
-        <h1>Product</h1>
-        <ul>
-          <li> <a href="/">Overview</a> </li>
-          <li> <a href="/">Pricing</a> </li>
-          <li> <a href="/">Marketplace</a> </li>
-          <li> <a href="/">Features</a> </li>
-          <li> <a href="/">Integrations</a> </li>
-        </ul>
-      </div>
-      <div className="footer-content__menu">
-        <h1>Product</h1>
-        <ul>
-          <li> <a href="/">Overview</a> </li>
-          <li> <a href="/">Pricing</a> </li>
-          <li> <a href="/">Marketplace</a> </li>
-          <li> <a href="/">Features</a> </li>
-          <li> <a href="/">Integrations</a> </li>
-        </ul>
-      </div>
+      {data.map( menu => {
+        return <div className="footer-content__menu" key={menu._id}>
+          <h1>{menu.title}</h1>
+          <ul>
+            {menu.lists.map( (list, index) => {
+               return <li key={`${menu.title}-${index}`}> <a href={list.url}>{list.name}</a> </li>
+            })}
+          </ul>
+        </div>
+        })}
+
+
 
     </div>
   </footer>;

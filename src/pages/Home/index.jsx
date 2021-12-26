@@ -13,10 +13,10 @@ export default function Home() {
       <Navigation />
         <Hero data={landingPage.hero}/>
     </div>
-    <Designed />
-    <StatePhone />
-    <LaptopSection />
-    <Footer />
+    <Designed data={landingPage.designed} />
+    <StatePhone data={landingPage.statePhone} />
+    <LaptopSection data={landingPage.laptopSection} />
+    <Footer data={landingPage.footerMenu} />
     </>
   );
 }
