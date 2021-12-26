@@ -34,6 +34,14 @@ footer {
                 display: flex;
                 flex-direction: column;
                 gap: rem(15);
+
+                li {
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
             }
         }
     }

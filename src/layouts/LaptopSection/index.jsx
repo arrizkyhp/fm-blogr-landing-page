@@ -1,7 +1,6 @@
 import laptop from 'assets/images/illustration-laptop-desktop.svg'
 
 export default function LaptopSection({ data }) {
-  console.log(data);
     return (
       <section className="laptop-section">
         <div className="laptop-section__content">

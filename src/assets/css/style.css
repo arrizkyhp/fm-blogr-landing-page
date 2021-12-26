@@ -194,22 +194,80 @@ body {
   width: 6.25rem;
 }
 .nav__left__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
   gap: 2.5rem;
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
+  height: 100%;
 }
 .nav__left__menu li {
-  position: relative;
   cursor: pointer;
+  z-index: 50;
 }
-.nav__left__menu li:after {
+.nav__left__menu li.dropdown {
+  z-index: 5;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__left__menu li.dropdown:hover .dropdown__button {
+  text-decoration: underline;
+  font-weight: 700;
+}
+.nav__left__menu li.dropdown:hover .dropdown__button:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.nav__left__menu li.dropdown .dropdown__button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.nav__left__menu li.dropdown .dropdown__button:after {
   position: absolute;
   right: -0.9375rem;
-  bottom: 0.0625rem;
+  bottom: 0.9375rem;
   content: url(assets/images/icon-arrow-light.svg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.nav__left__menu li.dropdown .dropdown__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  -webkit-box-shadow: 0px 17px 22px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 17px 22px rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  padding: 2.5rem 4.375rem 1.875rem 1.875rem;
+}
+.nav__left__menu li.dropdown:hover {
+  position: relative;
+}
+.nav__left__menu li.dropdown:hover .dropdown__content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  z-index: 999;
+  top: 2.8125rem;
+  left: -2.8125rem;
+}
+.nav__left__menu li.dropdown:hover .dropdown__content a {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.nav__left__menu li.dropdown:hover .dropdown__content a:hover {
+  text-decoration: underline;
 }
 .nav__left__menu li p:hover {
   text-decoration: underline;
@@ -258,7 +316,7 @@ body {
 .hero__content {
   font-family: "Overpass", sans-serif;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
 }
 .hero__content h1 {
   font-size: 4.25rem;
@@ -532,6 +590,9 @@ footer .footer-content__menu ul {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.9375rem;
+}
+footer .footer-content__menu ul li a:hover {
+  text-decoration: underline;
 }
 
 main {

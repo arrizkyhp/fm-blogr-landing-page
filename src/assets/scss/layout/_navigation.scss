@@ -27,25 +27,90 @@
         align-items: center;
         gap: rem(50);
 
+
         &__logo {
             width: rem(100);
         }
 
         &__menu {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(80px, 1fr));
             gap: rem(40);
             font-family: $font-ubuntu;
             font-size: rem(16);
+            height: 100%;
 
             li {
-                position: relative;
                 cursor: pointer;
+                z-index: 50;
 
-                &:after {
-                    position: absolute;
-                    right: rem(-15);
-                    bottom: rem(1);
-                    content: url(assets/images/icon-arrow-light.svg);
+                &.dropdown {
+                    z-index: 5;
+                    height: 100%;
+                    display: flex;
+
+                    &:hover {
+                        .dropdown__button {
+                            text-decoration: underline;
+                            font-weight: $font-weight-700;
+
+                            &:after {
+                                transform: rotate(180deg);
+                            }
+
+                        }
+                    }
+
+                    .dropdown__button {
+                        background-color: transparent;
+                        border: none;
+                        font-size: rem(16);
+                        cursor: pointer;
+                        display: block;
+                        text-align: center;
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            right: rem(-15);
+                            bottom: rem(15);
+                            content: url(assets/images/icon-arrow-light.svg);
+                            transition: all .3s ease;
+                        }
+                    }
+
+                    .dropdown__content {
+                        display: flex;
+                        flex-direction: column;
+                        display: none;
+                        box-shadow: $box-shadow-dropdown;
+                        border-radius: $border-radius-4;
+                        padding: rem(40) rem(70) rem(30) rem(30);
+
+                    }
+
+                    &:hover {
+                        position: relative;
+
+                        .dropdown__content {
+                            display: block;
+                            position: absolute;
+                            background: #fff;
+                            z-index: 999;
+                            top: rem(45);
+                            left: rem(-45);
+
+                            a {
+                                display: block;
+                                margin-bottom: rem(20);
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                            }
+                        }
+                    }
                 }
 
                 p {

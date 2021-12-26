@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     <div className="atf">
-      <Navigation />
+      <Navigation data={landingPage.footerMenu} />
         <Hero data={landingPage.hero}/>
     </div>
     <Designed data={landingPage.designed} />
