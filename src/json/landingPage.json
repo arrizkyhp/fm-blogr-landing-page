@@ -1,0 +1,114 @@
+{
+    "hero": {
+        "title": "A modern publishing platform",
+        "description": "Grow your audience and build your online brand",
+        "button": [
+          {
+            "_id": "btnhero1",
+            "title": "Start for Free",
+            "type": "white"
+          },
+          {
+            "_id": "btnhero2",
+            "title": "Learn More",
+            "type": "outline"
+          }
+        ]
+    },
+    "designed": {
+        "title": "Designed for the future",
+        "text": [
+          {
+            "_id": "dsgndtext1",
+            "title": "Introducing an extensible editor",
+            "description": "Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog."
+          },
+          {
+            "_id": "dsgndtext2",
+            "title": "Robust content management",
+            "description": "Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control."
+          }
+        ]
+    },
+    "statePhone": {
+      "title": "State of the Art Infrastructure",
+      "description": "With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive."
+    },
+    "laptopSection": [
+      {
+        "title": "Free, open, simple",
+        "description": "Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn."
+      },
+      {
+        "title": "Powerful tooling",
+        "description": "Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites."
+      }
+    ],
+    "footerMenu": [
+      {
+        "title": "Product",
+        "menu": [
+          {
+            "name": "Overview",
+            "url": "/"
+          },
+          {
+            "name": "Pricing",
+            "url": "/"
+          },
+          {
+            "name": "Marketplace",
+            "url": "/"
+          },
+          {
+            "name": "Features",
+            "url": "/"
+          },
+          {
+            "name": "Integrations",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "menu": [
+          {
+            "name": "About",
+            "url": "/"
+          },
+          {
+            "name": "Team",
+            "url": "/"
+          },
+          {
+            "name": "Blog",
+            "url": "/"
+          },
+          {
+            "name": "Careers",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "menu": [
+          {
+            "name": "Contact",
+            "url": "/"
+          },
+          {
+            "name": "Newsletter",
+            "url": "/"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "/"
+          }
+        ]
+      }
+    ]
+
+
+}

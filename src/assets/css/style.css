@@ -188,6 +188,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 3.125rem;
 }
 .nav__left__logo {
   width: 6.25rem;

@@ -25,6 +25,7 @@
     &__left {
         display: flex;
         align-items: center;
+        gap: rem(50);
 
         &__logo {
             width: rem(100);
