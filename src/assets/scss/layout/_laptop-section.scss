@@ -11,15 +11,30 @@
      margin: auto;
      margin-bottom: rem(295);
 
+     // Ipad Pro View
+    @include breakpoint-max(lg) {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: rem(150);
+        margin-bottom: rem(200);
+    }
+
      &__illustration {
          position: absolute;
          left: -26%;
          top: -45%;
 
-         // Laptop/Ipad Pro Viewport
+         // Laptop Viewport
          @include breakpoint-max(xxl) {
              left: -21%;
          }
+
+        // Ipad Pro View
+        @include breakpoint-max(lg) {
+            top: -20%;
+            left: 44%;
+            transform: translate(-50%, 0);
+        }
      }
 
      &__text {
@@ -27,6 +42,14 @@
         width: 100%;
         grid-template-columns: 1.15fr 1fr;
         justify-content: end;
+
+         // Ipad Pro View
+        @include breakpoint-max(lg) {
+            grid-row-start: 2;
+            grid-row-end: -1;
+            grid-template-columns: none;
+            justify-content: center;
+        }
 
         .text-column {
             order: 2;
@@ -37,6 +60,12 @@
             display: flex;
             flex-direction: column;
             gap: rem(70);
+
+             // Ipad Pro View
+            @include breakpoint-max(lg) {
+                gap: rem(40);
+                text-align: center;
+            }
 
             .text-group {
                 font-family: $font-overpass;

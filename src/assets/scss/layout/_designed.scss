@@ -8,8 +8,14 @@
     margin: auto;
     margin-bottom: rem(250);
 
+    // Laptop View
      @include breakpoint-max(xxl) {
         max-width: rem(1200);
+    }
+
+    // Ipad Pro View
+    @include breakpoint-max(lg) {
+        margin-bottom: rem(300);
     }
 
     &__title {
@@ -25,16 +31,37 @@
         text-align: left;
         position: relative;
 
+        // Ipad Pro View
+        @include breakpoint-max(lg) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: rem(70);
+        }
+
         &__text {
             font-family: $font-overpass;
             display: flex;
             flex-direction: column;
             gap: rem(70);
 
+            // Ipad Pro View
+            @include breakpoint-max(lg) {
+                grid-row-start: 2;
+                grid-row-end: -1;
+                align-items: center;
+                gap: rem(50);
+                text-align: center;
+            }
+
             h2 {
                 font-weight: $font-weight-400;
                 font-size: rem(27);
                 margin-bottom: rem(20);
+
+                 // Ipad Pro View
+                @include breakpoint-max(lg) {
+                   font-weight: $font-weight-600;
+                }
             }
 
             p {
@@ -49,6 +76,15 @@
             right: -23.5vw;
             top: rem(-240);
             z-index: -1;
+
+            // Ipad Pro View
+            @include breakpoint-max(lg) {
+
+            left: 40%;
+            transform: translate(-40%, 0);
+
+            }
+
         }
     }
 

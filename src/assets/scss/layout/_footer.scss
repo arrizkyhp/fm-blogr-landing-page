@@ -4,7 +4,12 @@ footer {
     background-color: $very-dark-black-blue;
     border-radius: $border-radius-footer;
     padding: rem(60) 0 rem(120) 0;
+    position: relative;
 
+    // Ipad Pro View
+    @include breakpoint-max(lg) {
+        padding-top: rem(80);
+    }
 
     .footer-content {
         width: 100%;
@@ -16,6 +21,11 @@ footer {
         // Laptop Viewport
         @include breakpoint-max(xxl) {
             max-width: rem(1200);
+        }
+
+        // Ipad Pro View
+        @include breakpoint-max(lg) {
+             max-width: rem(700);
         }
 
         &__menu {
@@ -44,5 +54,23 @@ footer {
                 }
             }
         }
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: rem(11);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        color: $white;
+
+        a {
+            color: $orange;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        // right: 50vw;
     }
 }

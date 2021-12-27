@@ -1,4 +1,5 @@
 import logo from "assets/images/logo.svg";
+import Attribution from "layouts/Attribution";
 
 const Footer = ({ data }) => {
 
@@ -19,6 +20,7 @@ const Footer = ({ data }) => {
 
 
     </div>
+    <Attribution />
   </footer>;
 };
 

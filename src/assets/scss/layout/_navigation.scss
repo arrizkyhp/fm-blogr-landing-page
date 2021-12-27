@@ -18,8 +18,14 @@
 
     flex: 5;
 
+    // Laptop View
     @include breakpoint-max(xxl) {
         max-width: rem(1200);
+    }
+
+    // Ipad Pro View
+    @include breakpoint-max(lg) {
+        max-width: rem(700);
     }
 
     &__left {
@@ -27,6 +33,10 @@
         align-items: center;
         gap: rem(50);
 
+        // Ipad Pro View
+        @include breakpoint-max(lg) {
+            gap: rem(30);
+        }
 
         &__logo {
             width: rem(100);
@@ -39,6 +49,12 @@
             font-family: $font-ubuntu;
             font-size: rem(16);
             height: 100%;
+
+
+            // Ipad Pro View
+            @include breakpoint-max(lg) {
+                gap: rem(20);
+            }
 
             li {
                 cursor: pointer;
@@ -128,6 +144,11 @@
         display: flex;
         align-items: center;
         gap: rem(30);
+
+         // Ipad Pro View
+        @include breakpoint-max(lg) {
+            gap: rem(20);
+        }
 
         a {
             font-family: $font-ubuntu;

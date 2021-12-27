@@ -28,11 +28,21 @@
     h1 {
     font-size: rem(68);
     font-weight: $font-weight-500;
+
+      // Ipad Pro View
+      @include breakpoint-max(lg) {
+          font-size: rem(50);
+      }
     }
 
     p {
       font-size: rem(24);
       margin-bottom: rem(40);
+
+       // Ipad Pro View
+      @include breakpoint-max(lg) {
+          font-size: rem(20);
+      }
     }
   }
 
