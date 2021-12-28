@@ -13,6 +13,11 @@
         max-width: rem(1200);
     }
 
+    // Laptop Small View
+    @include breakpoint-max(xl) {
+        margin-bottom: rem(300);
+    }
+
     // Ipad Pro View
     @include breakpoint-max(lg) {
         margin-bottom: rem(300);
@@ -23,6 +28,11 @@
         font-weight: $font-weight-400;
         font-family: $font-overpass;
         margin-bottom: rem(100);
+
+        // Laptop Small View
+        @include breakpoint-max(xl) {
+            font-weight: $font-weight-600;
+        }
     }
 
     &__content {
@@ -30,6 +40,13 @@
         grid-template-columns: repeat(2, 1fr );
         text-align: left;
         position: relative;
+
+        // Laptop Small View
+        @include breakpoint-max(xl) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: rem(70);
+        }
 
         // Ipad Pro View
         @include breakpoint-max(lg) {
@@ -44,8 +61,8 @@
             flex-direction: column;
             gap: rem(70);
 
-            // Ipad Pro View
-            @include breakpoint-max(lg) {
+            // Laptop Small View
+            @include breakpoint-max(xl) {
                 grid-row-start: 2;
                 grid-row-end: -1;
                 align-items: center;
@@ -53,15 +70,12 @@
                 text-align: center;
             }
 
+
             h2 {
                 font-weight: $font-weight-400;
                 font-size: rem(27);
                 margin-bottom: rem(20);
 
-                 // Ipad Pro View
-                @include breakpoint-max(lg) {
-                   font-weight: $font-weight-600;
-                }
             }
 
             p {
@@ -77,9 +91,14 @@
             top: rem(-240);
             z-index: -1;
 
+            // Laptop Small View
+            @include breakpoint-max(xl) {
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
             // Ipad Pro View
             @include breakpoint-max(lg) {
-
             left: 40%;
             transform: translate(-40%, 0);
 

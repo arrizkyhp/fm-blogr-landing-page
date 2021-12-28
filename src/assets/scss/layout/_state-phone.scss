@@ -11,6 +11,11 @@
     // overflow: hidden;
     border-radius: $border-radius-state;
 
+    // Laptop Small View
+    @include breakpoint-max(xl) {
+        height: rem(700);
+    }
+
      // Ipad Pro View
     @include breakpoint-max(lg) {
         height: rem(700);
@@ -41,10 +46,15 @@
                 left: 2%;
             }
 
+            // Laptop Small View
+            @include breakpoint-max(xl) {
+                left: 25%;
+                top: -30%;
+            }
+
              // Ipad Pro View
             @include breakpoint-max(lg) {
-                left: 10%;
-                top: -30%;
+                left: 15%;
             }
         }
 
@@ -65,12 +75,13 @@
                 background-position: bottom 15% left -90%;
             }
 
-             // Ipad Pro View
-            @include breakpoint-max(lg) {
+            // Laptop Small View
+            @include breakpoint-max(xl) {
                 background-position: bottom -40% left 60%;
                 justify-content: center;
                 padding-top: rem(280);
             }
+
 
             .text-group {
                 width: 100%;
@@ -82,9 +93,10 @@
                 font-family: $font-overpass;
                 color: $white;
 
-                // Ipad Pro View
-                @include breakpoint-max(lg) {
+                // Laptop Small View
+                @include breakpoint-max(xl) {
                     text-align: center;
+                    margin-right: 0;
                 }
 
                 h1 {
