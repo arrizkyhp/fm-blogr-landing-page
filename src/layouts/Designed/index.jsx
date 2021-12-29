@@ -1,6 +1,11 @@
-import illustration from "assets/images/illustration-editor-desktop.svg";
+import illustration_desktop from "assets/images/illustration-editor-desktop.svg";
+import illustration_mobile from "assets/images/illustration-editor-mobile.svg";
+import { useMediaQuery } from "react-responsive";
 
 export default function Designed({ data }) {
+  const isDesktop = useMediaQuery({ query: '(min-width: 720px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
+
     return (
       <section className="designed">
         <h1 className="designed__title text-very-dark-blue">{data.title}</h1>
@@ -17,7 +22,8 @@ export default function Designed({ data }) {
 
           </div>
           <div className="designed__content__image">
-            <img src={illustration} alt="illustration" />
+            {isDesktop && <img src={illustration_desktop} alt="illustration" />}
+            {isMobile && <img src={illustration_mobile} alt="illustration" />}
           </div>
         </div>
       </section>

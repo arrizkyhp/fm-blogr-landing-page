@@ -11,7 +11,12 @@ export default function Navigation({ data }) {
     }
 
     const showSubMenu = (e) => {
-       isShowed(e);
+       if(showed === e) {
+         isShowed("")
+       } else {
+         isShowed(e);
+       }
+
     }
 
     return (
@@ -28,11 +33,17 @@ export default function Navigation({ data }) {
             </div>
           </div>
 
-          <ul className={`nav__left__menu text-white ${checked ? 'show' : ""}`}>
+          <ul className={`nav__left__menu text-white ${checked ? "show" : ""}`}>
             {data.map((menu, index) => {
               return (
-                <li className={`dropdown ${showed === index ? "active" : " " }`} key={`list-${menu._id}`}>
-                  <button className="dropdown__button" title={menu.title} onClick={e => {showSubMenu(index)}}>
+                <li className={`dropdown ${showed === index ? "active" : " "}`} key={`list-${menu._id}`}>
+                  <button
+                    className="dropdown__button"
+                    title={menu.title}
+                    onClick={(e) => {
+                      showSubMenu(index);
+                    }}
+                  >
                     {menu.title}
                   </button>
                   <div className="dropdown__content">
@@ -47,6 +58,15 @@ export default function Navigation({ data }) {
                 </li>
               );
             })}
+            {checked && (
+              <>
+                <hr />
+                <a href="/" className="text-very-dark-blue">
+                  Login
+                </a>
+                <Button isPrimary>Sign Up</Button>
+              </>
+            )}
           </ul>
         </div>
 

@@ -10,6 +10,7 @@ $very-dark-blue: #1F3F5B;
 
 // Neutral
 $white: #ffffff;
+$gray: #d1d1d1;
 $light-gray: #EFEFF1;
 $grayish-blue: #C8C8CB;
 $very-dark-grayish-blue: #4B5862;
@@ -62,3 +63,4 @@ $base-border-radius: rem(8) !default;
 // Box-Shadow
 // $base-box-shadow: 0px 10px 25px rgba($red, 0.1), 0px 10px 25px rgba($red, 0.1);
 $box-shadow-dropdown:  0px 17px 22px rgba(0, 0, 0, 0.15);
+$box-shadow-dropdown-mobile:  0px 14px 24px rgba(0, 0, 0, 0.25), 0px 1.75302px 3.00517px rgba(0, 0, 0, 0.125);

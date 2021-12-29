@@ -23,6 +23,11 @@
         margin-bottom: rem(300);
     }
 
+    // mobile view
+    @include breakpoint-max(md) {
+        padding-top: rem(70);
+    }
+
     &__title {
         font-size: rem(38);
         font-weight: $font-weight-400;
@@ -32,6 +37,12 @@
         // Laptop Small View
         @include breakpoint-max(xl) {
             font-weight: $font-weight-600;
+        }
+
+        // mobile view
+        @include breakpoint-max(md) {
+            font-size: rem(26);
+            margin-bottom: rem(70);
         }
     }
 
@@ -48,11 +59,10 @@
             gap: rem(70);
         }
 
-        // Ipad Pro View
-        @include breakpoint-max(lg) {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            gap: rem(70);
+        // mobile view
+        @include breakpoint-max(md) {
+            grid-template-rows: 1fr 2fr;
+            gap: rem(30);
         }
 
         &__text {
@@ -71,17 +81,38 @@
             }
 
 
-            h2 {
-                font-weight: $font-weight-400;
-                font-size: rem(27);
-                margin-bottom: rem(20);
+            .content__text {
 
+            // mobile view
+            @include breakpoint-max(md) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+                h2 {
+                    font-weight: $font-weight-400;
+                    font-size: rem(27);
+                    margin-bottom: rem(20);
+
+                    // mobile view
+                    @include breakpoint-max(md) {
+                        width: 100%;
+                        max-width: rem(244);
+                    }
+                }
+
+                p {
+                    line-height: rem(30);
+                    max-width: rem(500);
+
+                    // mobile view
+                    @include breakpoint-max(md) {
+                        max-width: rem(290);
+                    }
+                }
             }
 
-            p {
-                line-height: rem(30);
-                max-width: rem(500);
-            }
 
         }
 
@@ -101,7 +132,12 @@
             @include breakpoint-max(lg) {
             left: 40%;
             transform: translate(-40%, 0);
+            }
 
+            // mobile view
+            @include breakpoint-max(md) {
+                top: 0;
+                left: 32%;
             }
 
         }

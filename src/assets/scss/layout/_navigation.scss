@@ -35,7 +35,8 @@
 
     // mobile View
     @include breakpoint-max(md) {
-         max-width: rem(380);
+         max-width: rem(340);
+         top: rem(10);
     }
 
     &__left {
@@ -161,6 +162,8 @@
                     padding: rem(30);
                     align-items: center;
                     top: rem(60);
+                    box-shadow: $box-shadow-dropdown-mobile;
+                    border-radius: $border-radius-4;
 
                     li {
                         &.dropdown {
@@ -168,13 +171,35 @@
                             flex-direction: column;
                             align-items: center;
                             width: 100%;
-                            gap: rem(25);
+                            gap: rem(20);
 
                             -webkit-touch-callout: none;
                             -webkit-tap-highlight-color: transparent;
 
                             &:focus {
                                 outline: none;
+                            }
+
+                            &.active {
+                                .dropdown__button {
+                                    &:after {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+
+                                .dropdown__content {
+                                    display: flex;
+                                    position: relative;
+                                    align-items: center;
+                                    top: 0;
+                                    left: 0;
+                                    background: $light-gray;
+                                    box-shadow: none;
+                                    padding: rem(20) 0;
+                                    gap: rem(20);
+                                    width: 100%;
+                                }
+
                             }
 
                             .dropdown__button {
@@ -188,21 +213,6 @@
 
                                 }
 
-                                &:hover {
-                                    &:after {
-                                        transform: rotate(180deg);
-                                    }
-                                }
-
-                                &:hover + .dropdown__content {
-                                    display: flex;
-                                    position: relative;
-                                    top: 0;
-                                    left: 0;
-                                    background: $light-gray;
-                                    box-shadow: none;
-                                    width: 100%;
-                                }
                             }
 
                             &:hover {
@@ -215,9 +225,6 @@
                                     }
                                 }
 
-                                .dropdown__content {
-                                    display: none;
-                                }
                             }
                         }
 
@@ -234,22 +241,6 @@
                     z-index: 5;
                     height: 100%;
                     display: flex;
-
-                    &:hover {
-                        .dropdown__button {
-                            text-decoration: underline;
-                            font-weight: $font-weight-700;
-
-                            &:after {
-                                transform: rotate(180deg);
-                            }
-
-                            &:hover {
-                                font-weight: normal;
-                            }
-
-                        }
-                    }
 
                     .dropdown__button {
                         background-color: transparent;
@@ -279,28 +270,7 @@
 
                     }
 
-                    &:hover {
-                        position: relative;
 
-                        .dropdown__content {
-                            display: block;
-                            position: absolute;
-                            background: #fff;
-                            z-index: 999;
-                            top: rem(45);
-                            left: rem(-45);
-
-                            a {
-                                display: block;
-                                margin-bottom: rem(20);
-
-                                &:hover {
-                                    text-decoration: underline;
-                                }
-
-                            }
-                        }
-                    }
                 }
 
                 p {
@@ -310,6 +280,51 @@
                 }
 
 
+            }
+
+            &:not(.show) {
+                li {
+                    &.dropdown {
+                        &:hover {
+                            position: relative;
+
+                            .dropdown__button {
+                                text-decoration: underline;
+                                font-weight: $font-weight-700;
+
+                                &:after {
+                                    transform: rotate(180deg);
+                                }
+
+
+                            }
+
+                            .dropdown__content {
+                                display: block;
+                                position: absolute;
+                                background: #fff;
+                                z-index: 999;
+                                top: rem(45);
+                                left: rem(-45);
+
+                                a {
+                                    display: block;
+                                    margin-bottom: rem(20);
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            hr {
+                width: 100%;
+                border-top: $gray;
             }
         }
     }

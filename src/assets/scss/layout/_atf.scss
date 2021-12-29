@@ -8,4 +8,11 @@
     height: 85vh;
     border-radius: $border-radius-hero;
     overflow: hidden;
+
+    // mobile view
+    @include breakpoint-max(md) {
+          height: 90vh;
+      overflow: visible;
+    }
+
 }

@@ -28,12 +28,36 @@ footer {
              max-width: rem(700);
         }
 
+        // mobile view
+        @include breakpoint-max(md) {
+            grid-template-columns: 1fr;
+            grid-template-rows: .2fr 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: none;
+            gap: rem(60);
+        }
+
+        img {
+
+            // mobile view
+            @include breakpoint-max(md) {
+                justify-self: center;
+            }
+        }
+
         &__menu {
             display: flex;
             flex-direction: column;
             color: $white;
             font-family: $font-ubuntu;
             gap: rem(50);
+
+             // mobile view
+            @include breakpoint-max(md) {
+                gap: rem(30);
+            }
 
             h1 {
                 font-weight: 700;
@@ -44,6 +68,8 @@ footer {
                 display: flex;
                 flex-direction: column;
                 gap: rem(15);
+
+
 
                 li {
                     a {
@@ -64,6 +90,12 @@ footer {
         transform: translate(-50%, 0%);
         color: $white;
 
+         // mobile view
+        @include breakpoint-max(md) {
+            width: 60%;
+            text-align: center;
+        }
+
         a {
             color: $orange;
 
@@ -71,6 +103,6 @@ footer {
                 text-decoration: underline;
             }
         }
-        // right: 50vw;
+
     }
 }
