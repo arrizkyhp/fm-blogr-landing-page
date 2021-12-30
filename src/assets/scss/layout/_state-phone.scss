@@ -16,9 +16,11 @@
         height: rem(700);
     }
 
-     // Ipad Pro View
-    @include breakpoint-max(lg) {
-        height: rem(700);
+
+    // mobile view
+    @include breakpoint-max(md) {
+        height: rem(560);
+        margin-bottom: rem(85);
     }
 
 
@@ -56,6 +58,15 @@
             @include breakpoint-max(lg) {
                 left: 15%;
             }
+
+            // mobile view
+            @include breakpoint-max(md) {
+                width: rem(365);
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         &__text {
@@ -82,6 +93,13 @@
                 padding-top: rem(280);
             }
 
+             // mobile view
+            @include breakpoint-max(md) {
+                padding-top: rem(100);
+                background-position: top 250% left 50%;
+                background-size: 650px;
+            }
+
 
             .text-group {
                 width: 100%;
@@ -99,6 +117,12 @@
                     margin-right: 0;
                 }
 
+                // mobile view
+                @include breakpoint-max(md) {
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 h1 {
                     font-weight: 600;
                     font-size: rem(36);
@@ -108,6 +132,11 @@
                     font-weight: 400;
                     font-size: rem(16);
                     line-height: rem(30);
+
+                     // mobile view
+                    @include breakpoint-max(md) {
+                        max-width: rem(300);
+                    }
                 }
             }
 

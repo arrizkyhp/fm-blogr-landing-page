@@ -19,6 +19,13 @@
         margin-bottom: rem(200);
     }
 
+    // mobile view
+    @include breakpoint-max(md) {
+        gap: rem(45);
+        justify-content: center;
+        align-items: center;
+    }
+
      &__illustration {
          position: absolute;
          left: -26%;
@@ -40,6 +47,15 @@
         @include breakpoint-max(lg) {
             left: 44%;
         }
+
+        // mobile view
+        @include breakpoint-max(md) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            align-self: stretch;
+        }
      }
 
      &__text {
@@ -55,6 +71,12 @@
             grid-template-columns: none;
             justify-content: center;
         }
+
+            // mobile view
+        @include breakpoint-max(md) {
+            padding: 0 rem(30);
+        }
+
 
         .text-column {
             order: 2;

@@ -25,8 +25,8 @@ export default function Navigation({ data }) {
           <img src={logo} alt="blogr logo" className="nav__left__logo" />
 
           <div id="menuToggle">
-            <input type="checkbox" onClick={showMenu} />
-            <div className="hamburger">
+            <input type="checkbox" onClick={showMenu} aria-label="open the menu" />
+            <div className="hamburger" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
@@ -40,13 +40,20 @@ export default function Navigation({ data }) {
                   <button
                     className="dropdown__button"
                     title={menu.title}
+                    id={menu.title}
+                    aria-expanded={showed === index ? "true" : "false"}
+                    aria-controls={`list${index}`}
                     onClick={(e) => {
                       showSubMenu(index);
                     }}
                   >
                     {menu.title}
                   </button>
-                  <div className="dropdown__content">
+                  <div
+                    className="dropdown__content"
+                    id={`list${index}`}
+                    aria-labelledby={menu.title}
+                  >
                     {menu.lists.map((list, index) => {
                       return (
                         <a className="text-very-dark-blue" href={list.url} key={`link-${menu.title}-${index}`}>

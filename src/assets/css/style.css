@@ -675,6 +675,12 @@ body {
   .designed__content {
     grid-template-rows: 1fr 2fr;
     gap: 1.875rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .designed__content__text {
@@ -758,8 +764,12 @@ body {
 }
 @media (max-width: 720px) {
   .designed__content__image {
+    position: inherit;
     top: 0;
-    left: 32%;
+    right: 0;
+    left: 0;
+    -webkit-transform: translate(10px, 10px);
+            transform: translate(10px, 10px);
   }
 }
 
@@ -785,9 +795,10 @@ body {
     height: 43.75rem;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 720px) {
   .state-phone {
-    height: 43.75rem;
+    height: 35rem;
+    margin-bottom: 5.3125rem;
   }
 }
 .state-phone__content {
@@ -829,6 +840,15 @@ body {
     left: 15%;
   }
 }
+@media (max-width: 720px) {
+  .state-phone__content .phone {
+    width: 22.8125rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .state-phone__content__text {
   width: 100%;
   background-image: url("assets/images/bg-pattern-circles.svg");
@@ -860,6 +880,13 @@ body {
     padding-top: 17.5rem;
   }
 }
+@media (max-width: 720px) {
+  .state-phone__content__text {
+    padding-top: 6.25rem;
+    background-position: top 250% left 50%;
+    background-size: 650px;
+  }
+}
 .state-phone__content__text .text-group {
   width: 100%;
   display: -webkit-box;
@@ -881,6 +908,16 @@ body {
     margin-right: 0;
   }
 }
+@media (max-width: 720px) {
+  .state-phone__content__text .text-group {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .state-phone__content__text .text-group h1 {
   font-weight: 600;
   font-size: 2.25rem;
@@ -889,6 +926,11 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.875rem;
+}
+@media (max-width: 720px) {
+  .state-phone__content__text .text-group p {
+    max-width: 18.75rem;
+  }
 }
 
 .laptop-section {
@@ -914,6 +956,17 @@ body {
     margin-bottom: 12.5rem;
   }
 }
+@media (max-width: 720px) {
+  .laptop-section__content {
+    gap: 2.8125rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .laptop-section__content__illustration {
   position: absolute;
   left: -26%;
@@ -937,6 +990,17 @@ body {
     left: 44%;
   }
 }
+@media (max-width: 720px) {
+  .laptop-section__content__illustration {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+  }
+}
 .laptop-section__content__text {
   display: grid;
   width: 100%;
@@ -953,6 +1017,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media (max-width: 720px) {
+  .laptop-section__content__text {
+    padding: 0 1.875rem;
   }
 }
 .laptop-section__content__text .text-column {
@@ -1091,7 +1160,7 @@ footer .attribution {
 }
 @media (max-width: 720px) {
   footer .attribution {
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
 }
