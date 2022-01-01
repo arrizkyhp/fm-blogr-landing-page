@@ -8,7 +8,7 @@ export default function Hero({ data }) {
   const isMobile = useMediaQuery({ query: "(max-width: 720px)" });
 
   return (
-    <main className="hero">
+    <div className="hero">
       {isDesktop && <img className="hero__background" src={background_desktop} alt="background" />}
       {isMobile && <img className="hero__background" src={background_mobile} alt="background" />}
 
@@ -25,6 +25,6 @@ export default function Hero({ data }) {
           })}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Designed({ data }) {
   const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
 
     return (
-      <div className="designed" role="complementary">
+      <div className="designed">
         <h1 className="designed__title text-very-dark-blue">{data.title}</h1>
         <div className="designed__content">
           <div className="designed__content__text">

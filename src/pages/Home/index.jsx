@@ -8,7 +8,7 @@ import landingPage from "json/landingPage.json";
 
 export default function Home() {
   return (
-    <>
+    <main>
     <div className="atf">
       <Navigation data={landingPage.footerMenu} />
         <Hero data={landingPage.hero}/>
@@ -17,6 +17,6 @@ export default function Home() {
     <StatePhone data={landingPage.statePhone} />
     <LaptopSection data={landingPage.laptopSection} />
     <Footer data={landingPage.footerMenu} />
-    </>
+    </main>
   );
 }
