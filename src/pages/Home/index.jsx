@@ -8,15 +8,15 @@ import landingPage from "json/landingPage.json";
 
 export default function Home() {
   return (
-    <main>
-    <div className="atf">
+    <>
+    <main className="atf">
       <Navigation data={landingPage.footerMenu} />
         <Hero data={landingPage.hero}/>
-    </div>
+    </main>
     <Designed data={landingPage.designed} />
     <StatePhone data={landingPage.statePhone} />
     <LaptopSection data={landingPage.laptopSection} />
     <Footer data={landingPage.footerMenu} />
-    </main>
+    </>
   );
 }
