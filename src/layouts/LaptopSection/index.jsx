@@ -7,7 +7,7 @@ export default function LaptopSection({ data }) {
   const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
 
     return (
-      <section className="laptop-section">
+      <div className="laptop-section">
         <div className="laptop-section__content">
           {isDesktop && <img src={laptop_desktop} alt="" className="laptop-section__content__illustration" />}
           {isMobile && <img src={laptop_mobile} alt="" className="laptop-section__content__illustration" />}
@@ -24,6 +24,6 @@ export default function LaptopSection({ data }) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     );
 }

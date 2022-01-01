@@ -7,7 +7,7 @@ export default function Designed({ data }) {
   const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
 
     return (
-      <section className="designed">
+      <div className="designed">
         <h1 className="designed__title text-very-dark-blue">{data.title}</h1>
         <div className="designed__content">
           <div className="designed__content__text">
@@ -26,6 +26,6 @@ export default function Designed({ data }) {
             {isMobile && <img src={illustration_mobile} alt="illustration" />}
           </div>
         </div>
-      </section>
+      </div>
     );
 }

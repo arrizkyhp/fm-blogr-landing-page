@@ -2,7 +2,7 @@ import phone from "assets/images/illustration-phones.svg"
 
 export default function StatePhone({ data }) {
     return (
-      <section className="state-phone">
+      <div className="state-phone">
         <div className="state-phone__content">
             <img src={phone} alt="two phone illustration" className="phone" />
             <div className="state-phone__content__text">
@@ -12,6 +12,6 @@ export default function StatePhone({ data }) {
               </div>
             </div>
         </div>
-      </section>
+      </div>
     );
 }
